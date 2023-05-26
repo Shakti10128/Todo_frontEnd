@@ -1,0 +1,109 @@
+.header{
+    background-color: rgb(133, 42, 245);
+    display: flex;
+    top: 0px;
+    position: sticky;
+    justify-content: space-between;
+
+    >.todo_name{
+        margin: 0rem 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.5rem;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+article{
+    margin: 0.1rem 2rem;
+    >.link{
+        padding: 0.2rem 1.5rem;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        &:hover{
+            background-color: white;
+            align-self: center;
+            color: rgb(133, 42, 245);
+        }
+    }
+    >.button{
+        padding: 0.2rem 1.5rem;
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+        border: none;
+        background-color: rgb(133, 42, 245);
+        &:hover{
+            background-color: white;
+            align-self: center;
+            color: rgb(133, 42, 245);
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 394px) {
+    .header{
+    background-color: rgb(133, 42, 245);
+    display: flex;
+    top: 0px;
+    position: sticky;
+    width: 100vw;
+
+    >.todo_name{
+        margin: 0.3rem 0.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+article{
+    display: flex;
+    margin: 0.1rem 2rem;
+    >.link{
+        padding: 0.2rem 0.1rem;
+        font-size: .7rem;
+    }
+    >.button{
+        margin-right: -1.5rem;
+        padding: 0.2rem 0.5rem;
+        font-size: .7rem;
+    }
+}
+
+}
+
+// width for 414
+@media screen and (max-width: 415px) {
+    .header{
+    background-color: rgb(133, 42, 245);
+    display: flex;
+    top: 0px;
+    position: sticky;
+    width: 100vw;
+
+    >.todo_name{
+        margin: 0.3rem 0.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+article{
+    display: flex;
+    margin: 0.1rem 2rem;
+    >.link{
+        padding: 0.2rem .5rem;
+        font-size: .7rem;
+    }
+    >.button{
+        margin-right: -1.5rem;
+        padding: 0.2rem 0.5rem;
+        font-size: .7rem;
+    }
+}
+
+}
