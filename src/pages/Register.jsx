@@ -16,7 +16,7 @@ const Register = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     setLoading(true)
-    console.log(name, email, password);
+    // if(name === "" || email === "" || password === "") return <Navigate to={'/login'}/>
     try {
       const { data } = await axios.post(
         `${server}/users/new`,
@@ -80,7 +80,7 @@ const Register = () => {
             required
             className="password"
           />
-          <button onClick={submitHandler} disabled={loading} type="submit" className="loginbtn">
+          <button  disabled={loading} type="submit" className="loginbtn">
             SignUp
           </button>
           <h4>Or</h4>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { server } from '..';
 import { toast } from 'react-hot-toast';
 
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,22 +17,22 @@ const Login = () => {
     e.preventDefault();
     setLoading(true)
     try {
-      const { data } = await axios.post(
-        `${server}/users/login`,
-        {
-          email,
-          password,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
+        const { data } = await axios.post(
+          `${server}/users/login`,
+          {
+            email,
+            password,
           },
-          withCredentials: true,
-        }
-      );
-      toast.success(data.message);
-      setIsAuthenticated(true);
-      setLoading(false);
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
+        toast.success(data.message);
+        setIsAuthenticated(true);
+        setLoading(false);
     } catch (error) {
       toast.error(error.response.data.message);
       setIsAuthenticated(false);
@@ -65,7 +66,7 @@ const Login = () => {
             required
             className="password"
           />
-          <button onClick={submitHandler} disabled={loading} type="submit" className="loginbtn">
+          <button  disabled={loading} type="submit" className="loginbtn">
           Login
           </button>
           <h4>Or</h4>
